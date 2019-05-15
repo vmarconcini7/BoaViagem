@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">BoaViagem</string>
+
+    <string-array name="tipoGasto">
+        <item>Alimentação</item>
+        <item>Combustível</item>
+        <item>Transporte</item>
+        <item>Hospedagem</item>
+    </string-array>
 </resources>
