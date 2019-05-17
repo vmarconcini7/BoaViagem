@@ -4,12 +4,13 @@
               android:paddingLeft="16dp"
               android:paddingRight="16dp"
               android:orientation="vertical"
-              android:gravity="center">
+              android:gravity="center" android:background="@android:color/holo_blue_bright">
 
-    <TextView android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:text="Teste"
-              android:layout_margin="90dp"/>
+    <ImageView
+            android:layout_width="381dp"
+            android:layout_height="352dp"
+            android:src="@mipmap/ic_launcher_foreground"
+            android:id="@+id/imageView"/>
 
     <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
@@ -24,27 +25,27 @@
                 android:text="Item 01"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:textSize="36sp" />
+                android:textSize="36sp"/>
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:text="Item 02"
-                android:textSize="36sp" />
+                android:textSize="36sp"/>
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:text="Item 03"
-                android:textSize="36sp" />
+                android:textSize="36sp"/>
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:text="Item 04"
-                android:textSize="36sp" />
+                android:textSize="36sp"/>
     </GridLayout>
 </LinearLayout>
