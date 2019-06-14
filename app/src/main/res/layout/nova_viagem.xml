@@ -1,50 +1,16 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:paddingLeft="16dp"
-              android:paddingRight="16dp"
-              android:orientation="vertical"
-              android:gravity="center">
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".NovaViagem">
 
-    <TextView android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:text="Teste"
-              android:layout_margin="90dp"/>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="B"
+            android:gravity="center"
+            android:textSize="80sp"/>
 
-    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:columnCount="2"
-                android:rowCount="2"
-                android:layout_marginBottom="30dp"
-                android:orientation="vertical">
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Item 01"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:textSize="36sp" />
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:text="Item 02"
-                android:textSize="36sp" />
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:text="Item 03"
-                android:textSize="36sp" />
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:text="Item 04"
-                android:textSize="36sp" />
-    </GridLayout>
-</LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/itemA" android:title="Nova Viagem" android:icon="@mipmap/ic_launcher"></item>
+
+    <item android:id="@+id/itemB" android:title="Novo Gasto" android:icon="@mipmap/ic_launcher"></item>
+
+    <item android:id="@+id/itemC" android:title="Minhas Viagens" android:icon="@mipmap/ic_launcher"></item>
+
+    <item android:id="@+id/itemD" android:title="Config" android:icon="@mipmap/ic_launcher"></item>
+
+</menu>
