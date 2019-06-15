@@ -19,5 +19,9 @@ class NovaViagem : Fragment() {
         return inflater.inflate(R.layout.nova_viagem, container, false)
     }
 
+    fun showDatePickerDialog(v: View) {
+        val newFragment = DatePickerFragment()
+        newFragment.show(fragmentManager, "datePicker")
+    }
 
 }
