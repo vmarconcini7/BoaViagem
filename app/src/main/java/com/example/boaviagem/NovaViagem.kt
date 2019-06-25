@@ -5,6 +5,12 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.boaviagem.dao.dbViagem
+import com.example.boaviagem.domain.Viagem
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 /**
  * A simple [Fragment] subclass.
@@ -24,4 +30,13 @@ class NovaViagem : Fragment() {
         newFragment.show(fragmentManager, "datePicker")
     }
 
+    fun salvar(v: View) {
+        GlobalScope.launch(Dispatchers.Main) {
+            val contatos = withContext(Dispatchers.IO) {
+                val viagemDao = dbViagem.getInstance(this@NovaViagem).viagemDao()
+                val viagem = Viagem("xxxx", "xxxx", "xxxxx", "xxx", 10F, 1)
+                viagemDao.inserir(viagem)
+            }
+        }
+    }
 }
