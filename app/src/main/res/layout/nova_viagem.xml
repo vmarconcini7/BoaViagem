@@ -8,7 +8,8 @@
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:context=".NovaViagem">
 
         <TextView
                 android:text="Escolha a sua viagem"
@@ -16,7 +17,6 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textView1"
                 android:layout_gravity="center"
-                android:fontFamily="casual"
                 android:layout_marginTop="30dp"
         />
         <TextView
@@ -40,16 +40,19 @@
                     android:orientation="horizontal"
                     android:layout_gravity="center"
                     android:layout_marginVertical="3dp"
-                    android:layout_marginHorizontal="10dp">
+                    android:layout_marginHorizontal="10dp"
+                    tools:context=".NovaViagem">
             <Button
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
+                 android:id="@+id/dtPartida"
                  android:text="Data Partida"
                  android:onClick="showDatePickerDialog" />
             <Button
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
-                 android:text="Data Partida"
+                 android:id="@+id/dtVolta"
+                 android:text="Data Volta"
                  android:onClick="showDatePickerDialog" />
         </LinearLayout>
 
@@ -99,7 +102,9 @@
         <Button
                 android:text="Criar uma nova viagem"
                 android:layout_width="409dp"
+                android:id="@+id/btnSalvar"
                 android:layout_height="51dp"
+                android:onClick="salvar"
         />
     </LinearLayout>
 

@@ -32,7 +32,7 @@ abstract class dbViagem() : RoomDatabase(){
 
         }
 
-        fun getInstance(context: NovaViagem): com.example.boaviagem.dao.dbViagem {
+        fun getInstance(context: Context): com.example.boaviagem.dao.dbViagem {
             if (instance == null) {
                 instance = Room.databaseBuilder(
                     context,

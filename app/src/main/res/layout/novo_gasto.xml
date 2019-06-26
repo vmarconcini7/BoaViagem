@@ -16,7 +16,6 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textView1"
                 android:layout_gravity="center"
-                android:fontFamily="casual"
                 android:layout_marginTop="30dp"
         />
 

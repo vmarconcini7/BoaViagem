@@ -1,10 +1,9 @@
 package com.example.boaviagem
 
 import android.app.Fragment
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.design.internal.BottomNavigationMenu
-import android.support.design.widget.BottomNavigationView
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun createFragment(f: android.support.v4.app.Fragment): Boolean {
+    private fun createFragment(f: androidx.fragment.app.Fragment): Boolean {
         supportFragmentManager
             .beginTransaction()
             .replace(R.id.framePrincipal, f)

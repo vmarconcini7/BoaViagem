@@ -21,7 +21,7 @@ interface ViagemDao {
     @Query("select * from Viagem order by dataIda")
     fun findAll(): List<Viagem>
 
-    @Query("select * from Gasto where id=:id")
+    @Query("select * from Viagem where id=:id")
     fun findById(id: Int): Viagem
 
 
