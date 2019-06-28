@@ -34,6 +34,9 @@ class NovaViagem : androidx.fragment.app.Fragment() {
         val dtVolta = layout.findViewById<Button>(R.id.dtVolta)
         val btnSalvar = layout.findViewById<Button>(R.id.btnSalvar)
         val dsDestino = layout.findViewById<Spinner>(R.id.dsDestino)
+        val edOrcamento = layout.findViewById<EditText>(R.id.edOrcamento)
+        val qtPessoa = layout.findViewById<EditText>(R.id.qtPessoa)
+        val ieTipo = layout.findViewById<RadioGroup>(R.id.qtPessoa).checkedRadioButtonId
         var controlFieldDate = "1";
         
         fun updateDateInView() {
@@ -78,7 +81,7 @@ class NovaViagem : androidx.fragment.app.Fragment() {
         }
 
         btnSalvar.setOnClickListener {
-            salvar()
+            salvar(dsDestino.text, dtPartida.text, dtVolta.text, ieTipo.text, edOrcamento.text, qtPessoa.text)
         }
     }
 
@@ -86,8 +89,8 @@ class NovaViagem : androidx.fragment.app.Fragment() {
                dataIda: String,
                dataVolta: String,
                tipoViagem: String,
-               orcamento: Int,
-               qtPessoas: Int) {
+               orcamento: String,
+               qtPessoas: String) {
         GlobalScope.launch(Dispatchers.Main) {
             val contatos = withContext(Dispatchers.IO) {
                 this@NovaViagem.context?.also {
