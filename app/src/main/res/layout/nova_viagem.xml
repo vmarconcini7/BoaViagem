@@ -27,7 +27,7 @@
                 android:layout_marginHorizontal="10dp"
         />
         <Spinner
-                android:id="@+id/escolaridade"
+                android:id="@+id/dsDestino"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:entries="@array/tipoGasto"
@@ -66,6 +66,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:id="@+id/ieTipo"
                 android:layout_marginVertical="3dp"
                 android:layout_marginHorizontal="10dp">
             <RadioButton
@@ -87,6 +88,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="3dp"
+                android:id="@+id/edOrcamento"  
                 android:layout_marginHorizontal="10dp"/>
         <TextView
                 android:text="Quantidade pessoas"
@@ -98,13 +100,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="3dp"
+                android:id="@+id/qtPessoa"  
                 android:layout_marginHorizontal="10dp"/>
         <Button
                 android:text="Criar uma nova viagem"
                 android:layout_width="409dp"
                 android:id="@+id/btnSalvar"
                 android:layout_height="51dp"
-                android:onClick="salvar"
         />
     </LinearLayout>
 
