@@ -39,7 +39,7 @@
                         android:layout_marginHorizontal="10dp"
                 />
                 <Spinner
-                        android:id="@+id/escolaridade"
+                        android:id="@+id/dsTipo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:entries="@array/tipoGasto"
@@ -52,8 +52,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="19dp"
                 android:layout_marginLeft="50dp"
-                android:text="Data Partida"
-                android:onClick="showDatePickerDialog" />
+                android:text="Data gasto"
+                android:id="@+id/dtGasto" />
         </LinearLayout>
 
         <TextView
@@ -66,6 +66,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="3dp"
+                android:id="@+id/dsGasto"
                 android:layout_marginHorizontal="10dp"/>
         <TextView
                 android:text="Local"
@@ -77,12 +78,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="3dp"
-                android:layout_marginHorizontal="10dp"/>
+                android:layout_marginHorizontal="10dp"
+                android:id="@+id/dsLocal"/>
         <Button
                 android:text="Criar um novo gasto"
                 android:layout_width="409dp"
                 android:layout_height="51dp"
-                android:onClick="salvar"
+                android:id="@+id/btnSalvar"
         />
     </LinearLayout>
 
