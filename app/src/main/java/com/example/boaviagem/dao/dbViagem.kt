@@ -19,18 +19,6 @@ abstract class dbViagem() : RoomDatabase(){
 
         private var instance: com.example.boaviagem.dao.dbViagem? = null
 
-        val MIGRATION_1_2 = object : Migration(1, 2) {
-            override fun migrate(database: SupportSQLiteDatabase) {
-
-                database.execSQL("alter table viagem add column destino text not null default ''")
-                database.execSQL("alter table viagem add column dataIda text not null default ''")
-                database.execSQL("alter table viagem add column dataVolta text not null default ''")
-                database.execSQL("alter table viagem add column tipoViagem text not null default ''")
-                database.execSQL("alter table viagem add column orcamento number not null default ''")
-                database.execSQL("alter table viagem add column qtPessoas number not null default ''")
-            }
-
-        }
 
         fun getInstance(context: Context): com.example.boaviagem.dao.dbViagem {
             if (instance == null) {
@@ -39,7 +27,6 @@ abstract class dbViagem() : RoomDatabase(){
                     com.example.boaviagem.dao.dbViagem::class.java,
                     "dados"
                 )
-                    .addMigrations(MIGRATION_1_2)
                     .build()
             }
             return instance as com.example.boaviagem.dao.dbViagem

@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import com.example.boaviagem.dao.dbViagem
 import com.example.boaviagem.domain.Viagem
 import kotlinx.coroutines.Dispatchers
@@ -16,6 +15,8 @@ import kotlinx.coroutines.withContext
 import java.text.SimpleDateFormat
 import android.text.Editable
 import android.util.Log
+import android.widget.*
+import java.util.*
 
 /**
  * A simple [Fragment] subclass.
@@ -36,8 +37,10 @@ class NovaViagem : androidx.fragment.app.Fragment() {
         val dsDestino = layout.findViewById<Spinner>(R.id.dsDestino)
         val edOrcamento = layout.findViewById<EditText>(R.id.edOrcamento)
         val qtPessoa = layout.findViewById<EditText>(R.id.qtPessoa)
-        val ieTipo = layout.findViewById<RadioGroup>(R.id.qtPessoa).checkedRadioButtonId
+        //val ieTipo = layout.findViewById<RadioGroup>(R.id.qtPessoa).checkedRadioButtonId
+        val ieTipo = "teste"
         var controlFieldDate = "1";
+        var cal = Calendar.getInstance()
         
         fun updateDateInView() {
 
@@ -81,8 +84,10 @@ class NovaViagem : androidx.fragment.app.Fragment() {
         }
 
         btnSalvar.setOnClickListener {
-            salvar(dsDestino.text, dtPartida.text, dtVolta.text, ieTipo.text, edOrcamento.text, qtPessoa.text)
+            salvar(dsDestino.getSelectedItem().toString(), dtPartida.text.toString(), dtVolta.text.toString(), ieTipo.toString(), edOrcamento.text.toString(), qtPessoa.text.toString())
         }
+
+        return layout;
     }
 
     fun salvar(destino: String,

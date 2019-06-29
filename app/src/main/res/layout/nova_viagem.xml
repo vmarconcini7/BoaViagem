@@ -46,14 +46,12 @@
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:id="@+id/dtPartida"
-                 android:text="Data Partida"
-                 android:onClick="showDatePickerDialog" />
+                 android:text="Data Partida" />
             <Button
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:id="@+id/dtVolta"
-                 android:text="Data Volta"
-                 android:onClick="showDatePickerDialog" />
+                 android:text="Data Volta" />
         </LinearLayout>
 
         <TextView
@@ -73,12 +71,12 @@
                     android:text="Lazer"
                     android:id="@+id/Lazer"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent" android:id="@+id/radioButton" android:layout_weight="1"/>
+                    android:layout_height="match_parent" android:layout_weight="1"/>
             <RadioButton
                     android:text="Trabalho"
                     android:id="@+id/Trabalho"                         
                     android:layout_width="wrap_content"
-                    android:layout_height="38dp" android:id="@+id/radioButton2" android:layout_weight="1"/>
+                    android:layout_height="38dp" android:layout_weight="1"/>
         </RadioGroup>
         <TextView
                 android:text="Orçamento"

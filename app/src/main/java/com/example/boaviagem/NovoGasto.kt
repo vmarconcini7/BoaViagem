@@ -16,6 +16,10 @@ import kotlinx.coroutines.withContext
 import java.text.SimpleDateFormat
 import android.text.Editable
 import android.util.Log
+import android.widget.DatePicker
+import android.widget.EditText
+import android.widget.Spinner
+import java.util.*
 
 /**
  * A simple [Fragment] subclass.
@@ -32,9 +36,10 @@ class NovoGasto : androidx.fragment.app.Fragment() {
 
         val dtGasto = layout.findViewById<Button>(R.id.dtGasto)
         val btnSalvar = layout.findViewById<Button>(R.id.btnSalvar)
-        val tipoGasto = layout.findViewById<Spinner>(R.id.tipoGasto)
+        val tipoGasto = layout.findViewById<Spinner>(R.id.dsTipo)
         val dsGasto = layout.findViewById<EditText>(R.id.dsGasto)
         val dsLocal = layout.findViewById<EditText>(R.id.dsLocal)
+        var cal = Calendar.getInstance()
         
         fun updateDateInView() {
 
@@ -63,8 +68,10 @@ class NovoGasto : androidx.fragment.app.Fragment() {
         }
 
         btnSalvar.setOnClickListener {
-            salvar(tipoGasto.text, dtGasto.text, dsGasto.text, dsLocal.text)
+            salvar(tipoGasto.getSelectedItem().toString(), dtGasto.text.toString(), dsGasto.text.toString(), dsLocal.text.toString())
         }
+
+        return layout;
     }
 
     fun salvar(tipo: String,
