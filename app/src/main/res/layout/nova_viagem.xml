@@ -30,7 +30,7 @@
                 android:id="@+id/dsDestino"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:entries="@array/tipoGasto"
+                android:entries="@array/tipoDestino"
                 android:layout_marginVertical="3dp"
                 android:layout_marginHorizontal="10dp"/>
 

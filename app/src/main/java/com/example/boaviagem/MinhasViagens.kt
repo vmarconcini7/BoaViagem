@@ -35,17 +35,27 @@ class MinhasViagens : androidx.fragment.app.Fragment() {
 
         GlobalScope.launch(Dispatchers.Main) {
 
+            val viagens = withContext(Dispatchers.IO) {
+                dbViagem.getInstance(layout.context).viagemDao().findAll()
+            }
+
+            adapter = ViagemAdapter(viagens)
+            lista.adapter = adapter
+
+            lista.layoutManager = LinearLayoutManager(layout.context,
+                LinearLayout.VERTICAL, false)
+            /*
             this@MinhasViagens.context?.also {
-                //val viagens = dbViagem.getInstance(it).viagemDao().findAll()
-                val viagens = listOf(
-                    Viagem("São Paulo", "01/10/2019", "05/10/2019", "Lazer", "1000", "2"),
-                    Viagem("Rio de Janeiro", "02/11/2019", "07/11/2019", "TRabalho", "2000", "2"),
-                    Viagem("Gaspar", "09/12/2019", "15/12/2019", "Lazer", "6000", "2"))
+                val viagens = dbViagem.getInstance(it).viagemDao().findAll()
+                //val viagens = listOf(
+                //    Viagem("São Paulo", "01/10/2019", "05/10/2019", "Lazer", "1000", "2"),
+                //    Viagem("Rio de Janeiro", "02/11/2019", "07/11/2019", "Trabalho", "2000", "2"),
+                //    Viagem("Gaspar", "09/12/2019", "15/12/2019", "Lazer", "6000", "2"))
                 adapter = ViagemAdapter(viagens)
                 lista.adapter = adapter
                 lista.adapter = ViagemAdapter(viagens)
                 lista.layoutManager = StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
-            }
+            }*/
         }
         return layout
     }

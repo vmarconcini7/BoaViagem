@@ -7,4 +7,10 @@
         <item>Transporte</item>
         <item>Hospedagem</item>
     </string-array>
+
+    <string-array name="tipoDestino">
+        <item>São Paulo</item>
+        <item>Rio de Janeiro</item>
+        <item>Gaspar</item>
+    </string-array>
 </resources>
